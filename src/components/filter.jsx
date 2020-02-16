@@ -4,12 +4,14 @@ import "react-input-range/lib/css/index.css";
 
 class Filter extends React.Component {
   state = {
-    value: { min: 100, max: 800 }
+    valuess: { min: 100, max: 800 }
   };
 
   submitApply = () => {
-    this.props.onChangeFunction(this.state.value);
-    console.log(this.state.value);
+    this.props.onChangeFunction(this.state.valuess);
+    console.log(this.state.valuess);
+    this.setState({ valuess: this.state.valuess });
+    console.log(this.state.valuess);
   };
 
   render() {
@@ -22,8 +24,8 @@ class Filter extends React.Component {
               <InputRange
                 maxValue={1000}
                 minValue={100}
-                value={this.state.value}
-                onChange={value => this.setState({ value })}
+                value={this.state.valuess}
+                onChange={valuess => this.setState({ valuess })}
               />
             </div>
             <div className="col-sm-12 text-center">
