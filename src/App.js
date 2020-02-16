@@ -4,7 +4,7 @@ import { Route } from "react-router-dom";
 import Counters from "./components/counters";
 import Carts from "./components/carts";
 
-import FA from "react-fontawesome";
+import "react-fontawesome";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.css";
 

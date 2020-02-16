@@ -11,7 +11,7 @@ class Carts extends React.Component {
     //this.totalPrice();
 
     console.log(this.props);
-    const { error, isLoaded, items } = this.props.state;
+    const { error, isLoaded } = this.props.state;
     if (error) {
       return <div>Error: {error.message}</div>;
     } else if (!isLoaded) {

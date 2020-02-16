@@ -16,9 +16,7 @@ class Counter extends Component {
       <React.Fragment>
         <div className="col-lg-3 col-md-6 mb-3">
           <div className="card h-90">
-            <a href="#">
-              <img className="card-img-top" src={value.img_url} alt=""></img>
-            </a>
+            <img className="card-img-top" src={value.img_url} alt=""></img>
             <div>{value.name}</div>
 
             <div>
