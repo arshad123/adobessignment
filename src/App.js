@@ -201,19 +201,6 @@ class App extends React.Component {
     store.set("itemForFilter", counters);
   };
 
-  deleteEvent = data => {
-    const counters = this.state.items.filter(c => c.id !== data.id);
-    this.setState({ counters });
-  };
-
-  restHandle = () => {
-    const counters = this.state.counters.map(c => {
-      c.value = 0;
-      return c;
-    });
-    this.setState({ counters });
-  };
-
   handleSearch = searchData => {
     const items = this.state.itemForFilter;
     if (searchData) {
