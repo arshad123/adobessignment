@@ -51,8 +51,8 @@ class App extends React.Component {
         itemForFilter: rememberMe,
         price: store.get("price")
       });
-    }6
-  }6
+    }
+  }
 
   sortData = sortBy => {
     console.log(sortBy);
