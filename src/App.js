@@ -3,7 +3,6 @@ import store from "store";
 import { Route } from "react-router-dom";
 import Counters from "./components/counters";
 import Carts from "./components/carts";
-
 import "react-fontawesome";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.css";
@@ -27,8 +26,8 @@ class App extends React.Component {
             result = result.map(v => {
               v.dPrice = v.price - (v.price * v.discount) / 100;
               v.isCart = 0;
-              v.img_url =
-                "https://i.picsum.photos/id/" + random + "/500/600.jpg";
+              v.img_url = v.img_url + random;
+                //"https://i.picsum.photos/id/" + random + "/500/600.jpg";
               random++;
               return v;
             });
@@ -52,8 +51,8 @@ class App extends React.Component {
         itemForFilter: rememberMe,
         price: store.get("price")
       });
-    }
-  }
+    }6
+  }6
 
   sortData = sortBy => {
     console.log(sortBy);
@@ -61,9 +60,9 @@ class App extends React.Component {
     const items = this.state.items;
     items.sort(function(a, b) {
       if (sortBy === 1) {
-        return a.dPrice - b.dPrice;
-      } else if (sortBy === 2) {
         return b.dPrice - a.dPrice;
+      } else if (sortBy === 2) {
+        return a.dPrice - b.dPrice;
       } else {
         return b.discount - a.discount;
       }
