@@ -26,8 +26,8 @@ class App extends React.Component {
             result = result.map(v => {
               v.dPrice = v.price - (v.price * v.discount) / 100;
               v.isCart = 0;
-              v.img_url = v.img_url + random;
-                //"https://i.picsum.photos/id/" + random + "/500/600.jpg";
+              v.img_url = 
+                "https://i.picsum.photos/id/" + random + "/500/600.jpg";
               random++;
               return v;
             });
